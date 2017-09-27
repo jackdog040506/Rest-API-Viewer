@@ -1,0 +1,20 @@
+{
+  "ngDeps": null,
+  "type": {
+    "JsonHighLighter": {
+      "class": "Identifier",
+      "name": "JsonHighLighter",
+      "moduleUrl": "asset:API_doc/lib/json_highlighter.dart",
+      "prefix": null,
+      "value": null
+    },
+    "main": {
+      "class": "Identifier",
+      "name": "main",
+      "moduleUrl": "asset:API_doc/lib/json_highlighter.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

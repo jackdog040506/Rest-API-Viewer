@@ -1,0 +1,31 @@
+:host {
+
+}
+
+.controls {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+a:link, a:visited, a:active, a:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.paper-grid {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    background: #fefefe;
+    margin: 10px;
+    padding: 5px;
+}
+.call{
+    width: 50%;
+}
+material-chip{
+    width: 60px;
+    display: inline-flex;
+    text-align: center;
+}
+.url{
+    font-size: 20px;
+}

@@ -1,0 +1,13 @@
+{
+  "ngDeps": null,
+  "type": {
+    "main": {
+      "class": "Identifier",
+      "name": "main",
+      "moduleUrl": "asset:API_doc/web/test.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

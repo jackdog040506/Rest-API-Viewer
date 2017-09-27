@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Create company",
+    "url": "rest/company",
+    "method": "POST",
+    "bodyParam": [
+      {
+        "name": "id",
+        "dataType": "STRING"
+      },
+      {
+        "name": "name",
+        "dataType": "STRING"
+      },
+      {
+        "name": "adminAccount",
+        "dataType": "STRING"
+      },
+      {
+        "name": "adminName",
+        "dataType": "STRING"
+      },
+      {
+        "name": "adminPassword",
+        "dataType": "STRING"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name",
+          "adminAccount": "adminAccount",
+          "adminName": "adminName",
+          "adminPassword": "adminPassword"
+        }
+      }
+    ]
+  }
+]

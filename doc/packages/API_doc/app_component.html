@@ -1,0 +1,56 @@
+<div *ngFor="let bookmark of bookmarkList">
+    <h1>{{bookmark.name}}</h1>
+    <material-expansionpanel-set>
+        <material-expansionpanel showSaveCancel="false" *ngFor="let rest of bookmark.rests" [name]="rest.title">
+            <div><material-chip removable="false">{{rest.method}}</material-chip><label class="url">{{rest.url}}</label></div>
+            <div class="paper-grid" *ngIf="rest.description!=null&&rest.description.isNotEmpty">
+                {{rest.description}}
+            </div>
+            <br>
+            <div class="param col-md-6" *ngIf="rest.urlParam.isNotEmpty">
+                <h3>URL Parameter</h3>
+                <table class="table bordered">
+                    <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DATA TYPE</th>
+                        <th>SAMPLE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let uparam of rest.urlParam">
+                        <td>{{uparam.name}}</td>
+                        <td>{{uparam.dataType}}</td>
+                        <td>{{uparam.sample}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="param col-md-6" *ngIf="rest.bodyParam.isNotEmpty">
+                <h3>Request Body Parameter</h3>
+                <table class="table bordered">
+                    <thead>
+                    <th>NAME</th>
+                    <th>DATA TYPE</th>
+                    <th>SAMPLE</th>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let bparam of rest.bodyParam">
+                        <td>{{bparam.name}}</td>
+                        <td>{{bparam.dataType}}</td>
+                        <td>{{bparam.sample}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="call">
+                <h3>Success Callback</h3>
+                <code-block *ngFor="let cb of rest.successCallback" [data]="cb.data" [code]="cb.code"></code-block>
+            </div>
+            <div class="call" *ngIf="rest.errorCallback.isNotEmpty">
+                <h3>Error Callback</h3>
+                <code-block *ngFor="let cb of rest.errorCallback" [data]="cb.data" [code]="cb.code"></code-block>
+            </div>
+        </material-expansionpanel>
+    </material-expansionpanel-set>
+</div>

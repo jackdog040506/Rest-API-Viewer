@@ -8,24 +8,46 @@
     flex-direction: column;
 }
 
-a:link, a:visited, a:active, a:hover{
+a:link, a:visited, a:active, a:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
+
 .paper-grid {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     background: #fefefe;
     margin: 10px;
     padding: 5px;
 }
-.call{
+
+.call {
     width: 50%;
 }
-material-chip{
-    width: 60px;
+
+material-chip {
+    width: 70px;
     display: inline-flex;
     text-align: center;
+    color: white;
 }
-.url{
+
+.url {
     font-size: 20px;
+}
+
+.GET {
+    background-color: #56b6d2;
+}
+
+.POST {
+    background-color: #55aa55;
+}
+
+.PUT {
+    background-color: #eaa94c;
+}
+
+.DELETE {
+    background-color: #d9534f;
+
 }

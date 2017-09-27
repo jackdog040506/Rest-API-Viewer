@@ -1,19 +1,37 @@
 /* Copyright (c) 2017, James-NB. All rights reserved. Use of this source code
    is governed by a BSD-style license that can be found in the LICENSE file. */
-
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Material+Icons);
 
 body {
-  padding: 5vw;
+    padding: 5vw;
 }
 
 * {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
 }
-.string { color: green; }
-.number { color: darkorange; }
-.boolean { color: blue; }
-.null { color: magenta; }
-.key { color: red; }
+
+.string {
+color: #a6e22e;
+}
+
+.number {
+    color: #fd971f;
+}
+
+.boolean {
+    color: #fd971f;
+}
+
+.null {
+    color: #ff00ff;
+}
+
+.key {
+    color: #f92672;
+}
+
+.om, .cm, .ob, .cb {
+    color: #8eefc7;
+}

@@ -2,7 +2,10 @@
     <h1>{{bookmark.name}}</h1>
     <material-expansionpanel-set>
         <material-expansionpanel showSaveCancel="false" *ngFor="let rest of bookmark.rests" [name]="rest.title">
-            <div><material-chip removable="false">{{rest.method}}</material-chip><label class="url">{{rest.url}}</label></div>
+            <div>
+                <material-chip [class]="rest.method" removable="false">{{rest.method}}</material-chip>
+                <label class="url">{{rest.url}}</label>
+            </div>
             <div class="paper-grid" *ngIf="rest.description!=null&&rest.description.isNotEmpty">
                 {{rest.description}}
             </div>

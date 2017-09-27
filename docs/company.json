@@ -1,5 +1,19 @@
 [
   {
+    "title": "Get company list",
+    "url": "rest/company",
+    "method": "GET",
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name"
+        }
+      }
+    ]
+  },
+  {
     "title": "Create company",
     "url": "rest/company",
     "method": "POST",

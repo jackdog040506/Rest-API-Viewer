@@ -1,0 +1,193 @@
+[
+{
+    "title": "Create single user",
+    "url": "rest/user/createOne",
+    "method": "POST",
+    "bodyParam": [
+      {
+        "name": "name",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "account",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "emails",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "password",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "locale",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "enabled",
+        "dataType": "BOOLEAN",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "orgMembers",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name",
+          "account": "account",
+          "emails": "emails",
+          "password": "password",
+          "locale": "locale",
+          "enabled": true,
+          "orgMembers": "orgMembers",
+        }
+      }
+    ]
+  },
+{
+    "title": "Create multiple user",
+    "url": "rest/user/createArray",
+    "method": "POST",
+    "bodyParam": [
+      {
+        "name": "",
+        "dataType": "ARRAY",
+        "sample":"Refrence create one param"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": [{
+          "id": "id",
+          "name": "name",
+          "account": "account",
+          "emails": "emails",
+          "password": "password",
+          "locale": "locale",
+          "enabled": true,
+          "orgMembers": "orgMembers",
+        }]
+      }
+    ]
+  },
+{
+    "title": "Update single user",
+    "url": "rest/user/updateOne",
+    "method": "PUT",
+    "bodyParam": [
+      {
+        "name": "id",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      },
+      {
+        "name": "name",
+        "dataType": "STRING",
+        "sample":"OPTIONAL"
+      },
+      {
+        "name": "emails",
+        "dataType": "STRING",
+        "sample":"OPTIONAL"
+      },
+      {
+        "name": "password",
+        "dataType": "STRING",
+        "sample":"OPTIONAL"
+      },
+      {
+        "name": "locale",
+        "dataType": "STRING",
+        "sample":"OPTIONAL"
+      },
+      {
+        "name": "enabled",
+        "dataType": "BOOLEAN",
+        "sample":"OPTIONAL"
+      },
+      {
+        "name": "orgMembers",
+        "dataType": "STRING",
+        "sample":"REQUIRED"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name",
+          "account": "account",
+          "emails": "emails",
+          "password": "password",
+          "locale": "locale",
+          "enabled": true,
+          "orgMembers": "orgMembers",
+        }
+      }
+    ]
+  },{
+    "title": "Update multiple user",
+    "url": "rest/user/updateArray",
+    "method": "PUT",
+    "bodyParam": [
+      {
+        "name": "",
+        "dataType": "ARRAY",
+        "sample":"Refrence create one param"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": [{
+          "id": "id",
+          "name": "name",
+          "account": "account",
+          "emails": "emails",
+          "password": "password",
+          "locale": "locale",
+          "enabled": true,
+          "orgMembers": "orgMembers",
+        }]
+      }
+    ]
+  },{
+    "title": "Update multiple user",
+    "url": "rest/user/updateArray",
+    "method": "DELETE",
+    "urlParam": [
+      {
+        "name": "id",
+        "dataType": "STRING"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": [{
+          "id": "id",
+          "name": "name",
+          "account": "account",
+          "emails": "emails",
+          "password": "password",
+          "locale": "locale",
+          "enabled": true,
+          "orgMembers": "orgMembers",
+        }]
+      }
+    ]
+  }]

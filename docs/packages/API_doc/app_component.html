@@ -1,10 +1,16 @@
+<div class="sidebar">
+    <ul>
+        <div class="sidebar-head"><a  href='#'><span>API DOC</span></a></div>
+        <li *ngFor="let bookmark of bookmarkList" class="sidebar-link "><a [href]="'#'+bookmark.name" onclick=changepage(this);><span>{{bookmark.name}}</span></a></li>
+    </ul>
+</div>
 <div *ngFor="let bookmark of bookmarkList">
-    <h1>{{bookmark.name}}</h1>
+    <h1 [id]="bookmark.name">{{bookmark.name}}</h1>
     <material-expansionpanel-set>
         <material-expansionpanel showSaveCancel="false" *ngFor="let rest of bookmark.rests" [name]="rest.title">
             <div>
                 <material-chip [class]="rest.method" removable="false">{{rest.method}}</material-chip>
-                <label class="url">{{rest.url}}</label>
+                &nbsp;&nbsp;&nbsp;<label class="url">{{rest.url}}</label>
             </div>
             <div class="paper-grid" *ngIf="rest.description!=null&&rest.description.isNotEmpty">
                 {{rest.description}}

@@ -5,6 +5,7 @@
 
 body {
     padding: 5vw;
+    background-color: #89cdfc;
 }
 
 * {
@@ -34,4 +35,8 @@ color: #a6e22e;
 
 .om, .cm, .ob, .cb {
     color: #8eefc7;
+}
+
+material-chip > .content{
+    width: 100%;
 }

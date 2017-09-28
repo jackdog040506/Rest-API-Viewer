@@ -1,0 +1,236 @@
+[
+  {
+    "title": "Get schedule list",
+    "url": "rest/schedule",
+    "method": "GET",
+    "successCallback": [
+      {
+        "code": "200",
+        "data": [
+          {
+            "id": "id",
+            "name": "name",
+            "description": "description",
+            "cronExpression": "cronExpression",
+            "status": true,
+            "actionMappingList": [
+              {
+                "id": "id",
+                "instanceList": [
+                  "id"
+                ]
+              }
+            ],
+            "timeZoneId": "timeZoneId"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Create schedule",
+    "url": "rest/schedule",
+    "method": "POST",
+    "bodyParam": [
+      {
+        "name": "name",
+        "dataType": "STRING",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "description",
+        "dataType": "STRING",
+        "sample": "OPTIONAL"
+      },
+      {
+        "name": "cronExpression",
+        "dataType": "STRING",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "status",
+        "dataType": "BOOLEAN",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "actionMappingList",
+        "dataType": "OBJECT ARRAY",
+        "sample": "REQUIRED ex [{'id':'id','instanceList':['String array for instanceId']}]"
+      },
+      {
+        "name": "timeZoneId",
+        "dataType": "STRING",
+        "sample": "OPTIONAL ex 'asia/taipei'"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name",
+          "description": "description",
+          "cronExpression": "cronExpression",
+          "status": true,
+          "actionMappingList": [
+            {
+              "id": "id",
+              "instanceList": [
+                "id"
+              ]
+            }
+          ],
+          "timeZoneId": "timeZoneId"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Update schedule",
+    "url": "rest/schedule",
+    "method": "PUT",
+    "bodyParam": [
+      {
+        "name": "name",
+        "dataType": "STRING",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "description",
+        "dataType": "STRING",
+        "sample": "OPTIONAL"
+      },
+      {
+        "name": "cronExpression",
+        "dataType": "STRING",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "status",
+        "dataType": "BOOLEAN",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "actionMappingList",
+        "dataType": "OBJECT ARRAY",
+        "sample": "REQUIRED ex [{'id':'id','instanceList':['String array for instanceId']}]"
+      },
+      {
+        "name": "timeZoneId",
+        "dataType": "STRING",
+        "sample": "OPTIONAL ex 'asia/taipei'"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name",
+          "description": "description",
+          "cronExpression": "cronExpression",
+          "status": true,
+          "actionMappingList": [
+            {
+              "id": "id",
+              "instanceList": [
+                "id"
+              ]
+            }
+          ],
+          "timeZoneId": "timeZoneId"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Delete schedule",
+    "url": "rest/schedule",
+    "method": "DELETE",
+    "urlParam": [
+      {
+        "name": "rest/schedule/{id}",
+        "dataType": "STRING",
+        "sample": "REQUIRED"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": true
+      }
+    ]
+  },
+  {
+    "title": "Get instance list",
+    "url": "rest/schedule/getinstancelist",
+    "method": "GET",
+    "successCallback": [
+      {
+        "code": "200",
+        "data": [
+          {
+            "serviceType": "serviceType",
+            "instanceId": "instanceId"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Get action list",
+    "url": "rest/schedule/getactionlist",
+    "method": "GET",
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "id": "id",
+          "name": "name",
+          "description": "description",
+          "serviceType": "serviceType"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Get timezone list",
+    "url": "rest/schedule/gettimezonelist",
+    "method": "GET",
+    "description":"Get whole world timezones",
+    "successCallback": [
+      {
+        "code": "200",
+        "data": [
+          "asia/taipei","..."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Get timezone offset by timezoneId",
+    "url": "rest/schedule/gettimezoneoffset",
+    "method": "GET",
+    "bodyParam": [
+      {
+        "name": "timeZoneId",
+        "dataType": "STRING",
+        "sample": "REQUIRED"
+      },
+      {
+        "name": "date",
+        "dataType": "NUMBER",
+        "sample": "REQUIRED define mills since epoch"
+      }
+    ],
+    "successCallback": [
+      {
+        "code": "200",
+        "data": {
+          "rawOffset": 480000,
+          "dayLightSaveOffset": 480000
+        }
+      }
+    ]
+  }
+]

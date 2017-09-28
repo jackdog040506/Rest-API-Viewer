@@ -1,7 +1,7 @@
 <div class="sidebar">
     <ul>
         <div class="sidebar-head"><a  href='#'><span>API DOC</span></a></div>
-        <li *ngFor="let bookmark of bookmarkList" class="sidebar-link "><a [href]="'#'+bookmark.name" onclick=changepage(this);><span>{{bookmark.name}}</span></a></li>
+        <li *ngFor="let bookmark of bookmarkList" class="sidebar-link "><a [href]="'#'+bookmark.name"><span>{{bookmark.name}}</span></a></li>
     </ul>
 </div>
 <div *ngFor="let bookmark of bookmarkList">

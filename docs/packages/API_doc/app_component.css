@@ -70,6 +70,7 @@ material-chip {
     position: fixed;
     top: 0px;
     overflow-y: auto;
+    overflow-x: hidden;
     width: 150px;
     height:100%;
     background: #333333;

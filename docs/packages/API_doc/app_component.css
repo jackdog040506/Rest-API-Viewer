@@ -69,7 +69,7 @@ material-chip {
     z-index: 100;
     position: fixed;
     top: 0px;
-    overflow:hidden;
+    overflow-y: auto;
     width: 150px;
     height:100%;
     background: #333333;
@@ -98,7 +98,6 @@ material-chip {
 .sidebar > ul > li:hover a {  background: #1b9bff;}
 .sidebar-head{
     padding-top: 0px;
-    margin-bottom: 30px;
     border-bottom: 4px solid #32CD32;
     font-size: 18px;
     font-weight: bold;

@@ -1,0 +1,24 @@
+<tr>
+    <td>{{p.name}}</td>
+    <td>{{p.dataType}}</td>
+    <td>{{p.sample}}</td>
+</tr>
+<tr *ngIf="p.subParam.isNotEmpty">
+    <td width="5%" class="noPadding">
+        <i *ngIf="!p.collapse" class="material-icons" (click)="p.collapse=true">format_indent_increase</i>
+        <i *ngIf="p.collapse" class="material-icons" (click)="p.collapse=false">subdirectory_arrow_right</i>
+    </td>
+    <td width="95%" colspan="2" class="noPadding">
+        <table class="table" *ngIf="p.collapse">
+            <thead>
+            <tr>
+                <th>NAME</th>
+                <th>DATA TYPE</th>
+                <th>SAMPLE</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let pp of p.subParam" [data]="pp" tree-table>
+            </tbody>
+        </table>
+    </td>
+</tr>

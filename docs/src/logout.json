@@ -1,0 +1,1 @@
+[{"successCallback":[],"javaMethodName":"logout","method":"GET","javaClass":"com.infinities.cloudfusion.um.LogoutRest","bodyParam":[],"title":"Logout","url":"/logout/","urlParam":[]}]

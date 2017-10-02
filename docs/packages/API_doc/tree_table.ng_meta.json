@@ -1,0 +1,80 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:API_doc/app_component.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2/angular2.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "TreeTableComponent",
+        "7": [
+          {
+            "2": "TreeTableComponent"
+          }
+        ]
+      }
+    ],
+    "6": "tree_table.dart",
+    "7": [
+      {
+        "1": "package:API_doc/app_component.template.dart",
+        "4": "i0"
+      },
+      {
+        "1": "package:angular2/angular2.template.dart",
+        "4": "i1"
+      }
+    ]
+  },
+  "type": {
+    "TreeTableComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "tbody[tree-table]",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "TreeTableComponent",
+        "moduleUrl": "asset:API_doc/lib/tree_table.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "p": "data"
+      },
+      "inputTypes": {
+        "p": " Param"
+      },
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<tr>\r\n    <td>{{p.name}}</td>\r\n    <td>{{p.dataType}}</td>\r\n    <td>{{p.sample}}</td>\r\n</tr>\r\n<tr *ngIf=\"p.subParam.isNotEmpty\">\r\n    <td width=\"5%\" class=\"noPadding\">\r\n        <i *ngIf=\"!p.collapse\" class=\"material-icons\" (click)=\"p.collapse=true\">format_indent_increase</i>\r\n        <i *ngIf=\"p.collapse\" class=\"material-icons\" (click)=\"p.collapse=false\">subdirectory_arrow_right</i>\r\n    </td>\r\n    <td width=\"95%\" colspan=\"2\" class=\"noPadding\">\r\n        <table class=\"table\" *ngIf=\"p.collapse\">\r\n            <thead>\r\n            <tr>\r\n                <th>NAME</th>\r\n                <th>DATA TYPE</th>\r\n                <th>SAMPLE</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody *ngFor=\"let pp of p.subParam\" [data]=\"pp\" tree-table>\r\n            </tbody>\r\n        </table>\r\n    </td>\r\n</tr>",
+        "templateUrl": "asset:API_doc/lib/tree_table.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:API_doc/lib/tree_table.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

@@ -44,3 +44,8 @@ material-chip > .content {
 .qd {
     color: white;
 }
+
+.subTable{
+    width: 95%;
+    left: 5%;
+}

@@ -1,0 +1,11 @@
+.noPadding{
+    padding:0;
+}
+
+.noPadding:first-child{
+    text-align: center;
+}
+
+i.material-icons{
+    font-size: 30px;
+}

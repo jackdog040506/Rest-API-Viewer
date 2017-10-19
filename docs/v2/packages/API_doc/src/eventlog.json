@@ -1,1 +1,0 @@
-[{"successCallback":[],"javaMethodName":"search","method":"GET","javaClass":"com.infinities.cloudfusion.vm.EventlogRestfulService","bodyParam":[],"title":"Search","url":"/eventlog/","urlParam":[{"dataType":"String","name":"startDate","isArray":false,"sample":"REQUIRED ","subParam":[]},{"dataType":"String","name":"dueDate","isArray":false,"sample":"REQUIRED ","subParam":[]}]}]

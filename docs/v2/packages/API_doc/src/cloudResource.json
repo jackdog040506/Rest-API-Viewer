@@ -1,0 +1,1 @@
+[{"successCallback":[],"javaMethodName":"listByHypervisor","method":"GET","javaClass":"com.infinities.cloudfusion.compute.vm.VmResourceRestful","bodyParam":[],"title":"List By Hypervisor","url":"/cloudResource/hypervisor/{id}","urlParam":[{"dataType":"String","name":"{id}","isArray":false,"sample":"REQUIRED ","subParam":[]}]}]

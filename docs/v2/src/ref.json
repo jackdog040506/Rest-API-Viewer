@@ -11,6 +11,7 @@
     "Credential": "credential",
     "Dashboard": "dashboard",
     "Eventlog": "eventlog",
+    "Eip": "eip",
     "Form Process": "formProcess",
     "Image": "image",
     "Keypair": "keypair",

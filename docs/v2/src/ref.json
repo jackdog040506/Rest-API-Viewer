@@ -34,6 +34,7 @@
     "Realmverify": "realmverify",
     "Register": "register",
     "Resetpassword": "resetpassword",
+    "Role": "role",
     "Router": "router",
     "Schedule": "schedule",
     "Securitygroup": "securitygroup",

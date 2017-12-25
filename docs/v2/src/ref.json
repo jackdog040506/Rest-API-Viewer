@@ -15,7 +15,7 @@
     "Errorhandling": "errorhandling",
     "Eventlog": "eventlog",
     "Exchangedata": "exchangedata",
-    "Formprocess": "formprocess",
+    "Formprocess": "formProcess",
     "Image": "image",
     "Keypair": "keypair",
     "Lbs": "lbs",

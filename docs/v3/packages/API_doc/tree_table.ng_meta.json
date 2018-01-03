@@ -1,0 +1,80 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:API_doc/app_component.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2/angular2.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "TreeTableComponent",
+        "7": [
+          {
+            "2": "TreeTableComponent"
+          }
+        ]
+      }
+    ],
+    "6": "tree_table.dart",
+    "7": [
+      {
+        "1": "package:API_doc/app_component.template.dart",
+        "4": "i0"
+      },
+      {
+        "1": "package:angular2/angular2.template.dart",
+        "4": "i1"
+      }
+    ]
+  },
+  "type": {
+    "TreeTableComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "tbody[tree-table]",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "TreeTableComponent",
+        "moduleUrl": "asset:API_doc/lib/tree_table.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "p": "data"
+      },
+      "inputTypes": {
+        "p": " ParamBody"
+      },
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<tr>\r\n    <td>\r\n        {{p.name}}&nbsp;&nbsp;&nbsp;\r\n        <i *ngIf=\"p.hasDetail&&!p.collapse\" style=\"vertical-align: middle\" class=\"material-icons\"\r\n           (click)=\"p.collapse=true\">format_indent_increase</i>\r\n        <i *ngIf=\"p.hasDetail&&p.collapse\" style=\"vertical-align: middle\" class=\"material-icons\"\r\n           (click)=\"p.collapse=false\">subdirectory_arrow_right</i>\r\n\r\n    </td>\r\n    <td><label *ngIf=\"p.isArray\" class=\"label label-info\">Array</label>&nbsp;&nbsp;&nbsp;{{p.getType()}}</td>\r\n    <td>{{p.sample()}}\r\n    </td>\r\n</tr>\r\n<tr *ngIf=\"p.hasDetail&&p.collapse\">\r\n    <td colspan=\"3\" class=\"noPadding\">\r\n        <div style=\"width: 95%;display: inline-block;margin-left: 5%\">\r\n            <table *ngIf=\"p.schema.items!=null\" class=\"table\">\r\n                <thead>\r\n                <tr>\r\n                    <th width=\"30%\">NAME</th>\r\n                    <th width=\"30%\">DATA TYPE</th>\r\n                    <th width=\"40%\">SAMPLE</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let pp of p.schema.items.properties\" [data]=\"pp\" tree-table>\r\n                </tbody>\r\n            </table>\r\n            <table *ngIf=\"p.schema.properties.isNotEmpty\" class=\"table\">\r\n                <thead>\r\n                <tr>\r\n                    <th width=\"30%\">NAME</th>\r\n                    <th width=\"30%\">DATA TYPE</th>\r\n                    <th width=\"40%\">SAMPLE</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let pp of p.schema.properties\" [data]=\"pp\" tree-table>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </td>\r\n</tr>",
+        "templateUrl": "asset:API_doc/lib/tree_table.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:API_doc/lib/tree_table.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

@@ -1,0 +1,18 @@
+{
+  "name": "API-doc",
+  "authors": [
+    "James-NB <james@infinitiessoft.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

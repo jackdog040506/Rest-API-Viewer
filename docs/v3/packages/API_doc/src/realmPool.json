@@ -1,0 +1,1 @@
+[{"successCallback":[],"javaMethodName":"create","method":"POST","javaClass":"com.infinities.cloudfusion.compute.vm.RealmPoolRestful","bodyParam":[],"title":"Create","url":"/realmPool/","urlParam":[]}]

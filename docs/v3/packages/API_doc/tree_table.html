@@ -1,0 +1,41 @@
+<tr>
+    <td>
+        {{p.name}}&nbsp;&nbsp;&nbsp;
+        <i *ngIf="p.hasDetail&&!p.collapse" style="vertical-align: middle" class="material-icons"
+           (click)="p.collapse=true">format_indent_increase</i>
+        <i *ngIf="p.hasDetail&&p.collapse" style="vertical-align: middle" class="material-icons"
+           (click)="p.collapse=false">subdirectory_arrow_right</i>
+
+    </td>
+    <td><label *ngIf="p.isArray" class="label label-info">Array</label>&nbsp;&nbsp;&nbsp;{{p.getType()}}</td>
+    <td>{{p.sample()}}
+    </td>
+</tr>
+<tr *ngIf="p.hasDetail&&p.collapse">
+    <td colspan="3" class="noPadding">
+        <div style="width: 95%;display: inline-block;margin-left: 5%">
+            <table *ngIf="p.schema.items!=null" class="table">
+                <thead>
+                <tr>
+                    <th width="30%">NAME</th>
+                    <th width="30%">DATA TYPE</th>
+                    <th width="40%">SAMPLE</th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let pp of p.schema.items.properties" [data]="pp" tree-table>
+                </tbody>
+            </table>
+            <table *ngIf="p.schema.properties.isNotEmpty" class="table">
+                <thead>
+                <tr>
+                    <th width="30%">NAME</th>
+                    <th width="30%">DATA TYPE</th>
+                    <th width="40%">SAMPLE</th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let pp of p.schema.properties" [data]="pp" tree-table>
+                </tbody>
+            </table>
+        </div>
+    </td>
+</tr>

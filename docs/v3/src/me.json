@@ -1,0 +1,1 @@
+[{"bodyParam":[],"javaClass":"com.infinities.cloudfusion.jaxrs.rest.UserProfileRest","javaMethodName":"get","method":"GET","successCallback":[],"title":"Get","url":"/me/","urlParam":[]}]

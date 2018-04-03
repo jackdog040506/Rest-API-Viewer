@@ -26,6 +26,7 @@
     "Nchc": "nchc",
     "Network": "network",
     "Orders": "orders",
+    "openstack": "openstack",
     "Org": "org",
     "Payment": "payment",
     "Permissions": "permissions",

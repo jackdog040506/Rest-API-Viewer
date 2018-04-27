@@ -6,6 +6,7 @@
     "Bill": "bill",
     "Cart": "cart",
     "Cloud Service": "cloudService",
+    "Cloud Provider": "cloudProvider",
     "Company": "company",
     "Container": "container",
     "Container Cluster": "containerCluster",
